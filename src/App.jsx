@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import Problem from './sections/Problem';
@@ -13,17 +13,34 @@ import Faq from './sections/Faq';
 import FinalCta from './sections/FinalCta';
 import Footer from './sections/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Pricing from './pages/Pricing';
 
 function App() {
-  const [page, setPage] = useState('home');
+  const getPageFromHash = () => {
+    const hash = window.location.hash.replace('#', '').trim();
+    return ['pricing', 'privacy'].includes(hash) ? hash : 'home';
+  };
+
+  const [page, setPage] = useState(getPageFromHash);
+
+  useEffect(() => {
+    const onHashChange = () => setPage(getPageFromHash());
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   const navigateTo = (p) => {
+    window.location.hash = p === 'home' ? '' : p;
     setPage(p);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   if (page === 'privacy') {
     return <PrivacyPolicy onBack={() => navigateTo('home')} />;
+  }
+
+  if (page === 'pricing') {
+    return <Pricing onBack={() => navigateTo('home')} />;
   }
 
   return (

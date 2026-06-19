@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { FiCpu, FiArrowLeft, FiMail, FiShield } from 'react-icons/fi';
+import { FiArrowLeft, FiMail, FiShield } from 'react-icons/fi';
+import logoImg from '../assets/logo.png';
 
 const sections = [
   {
@@ -285,13 +286,12 @@ export default function PrivacyPolicy({ onBack }) {
             <FiArrowLeft className="group-hover:-translate-x-1 transition-transform duration-200" />
             Back to Home
           </button>
-          <a href="#" onClick={onBack} className="flex items-center space-x-2 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-indigo via-brand-purple to-brand-cyan flex items-center justify-center shadow-lg shadow-brand-indigo/35 group-hover:scale-105 transition-transform duration-300">
-              <FiCpu className="text-white text-base animate-pulse-slow" />
-            </div>
-            <span className="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
-              Mediamation
-            </span>
+          <a href="#" onClick={onBack} className="flex items-center group">
+            <img
+              src={logoImg}
+              alt="Mediamation logo"
+              className="h-9 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
           </a>
         </div>
       </nav>

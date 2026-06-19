@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FiCpu, FiMail, FiSend } from 'react-icons/fi';
+import { FiMail, FiSend } from 'react-icons/fi';
+import logoImg from '../assets/logo.png';
 import { FaInstagram, FaFacebook, FaLinkedin, FaPinterest, FaTumblr } from 'react-icons/fa';
 
 export default function Footer({ onNavigate }) {
@@ -24,13 +25,12 @@ export default function Footer({ onNavigate }) {
           
           {/* Logo & Intro Area */}
           <div className="md:col-span-4 space-y-4">
-            <a href="#" className="flex items-center space-x-2 group">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-indigo via-brand-purple to-brand-cyan flex items-center justify-center">
-                <FiCpu className="text-white text-base animate-pulse-slow" />
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight text-white">
-                Mediamation
-              </span>
+            <a href="#" className="flex items-center group">
+              <img
+                src={logoImg}
+                alt="Mediamation logo"
+                className="h-9 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              />
             </a>
             <p className="text-xs text-slate-400 leading-relaxed max-w-xs">
               AI-powered social media automation. Create once, publish everywhere. Auto-generate captions, schedule queues, and monitor results.
