@@ -17,7 +17,7 @@ export default function Features() {
   return (
     <section id="features" className="relative py-24 radial-gradient-fuchsia">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="font-display text-base font-semibold text-brand-purple uppercase tracking-wider mb-3">
@@ -27,13 +27,13 @@ export default function Features() {
             Packed with Pro features.
           </p>
           <p className="text-slate-400">
-            Everything you need to automate your social campaigns, scale organic reach, and analyze performance from a unified command center.
+            Everything you need to create, schedule, and automate your social media workflow from one powerful dashboard. Generate AI-powered captions, manage multiple accounts, and publish content automatically across every platform.
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
+
           {/* Card 1: AI Caption Generator */}
           <GlassCard delay={0}>
             <div className="flex items-center space-x-3 mb-5">
@@ -52,10 +52,10 @@ export default function Features() {
                 <span className="text-brand-cyan">Active</span>
               </div>
               <div className="h-2 w-full bg-slate-900 rounded-full overflow-hidden">
-                <motion.div 
+                <motion.div
                   animate={{ width: ["10%", "85%", "10%"] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="h-full bg-brand-cyan" 
+                  className="h-full bg-brand-cyan"
                 />
               </div>
               <div className="bg-slate-900/80 p-2 rounded text-[9px] text-slate-300 italic border border-white/5">
@@ -99,19 +99,19 @@ export default function Features() {
             {/* Visual Micro Mockup */}
             <div className="bg-slate-950/60 p-3.5 rounded-xl border border-white/5 space-y-3">
               <div className="flex border-b border-white/5 pb-1.5 space-x-2 text-[9px] font-semibold">
-                <button 
+                <button
                   onClick={() => setActiveTab('insta')}
                   className={`pb-1 px-1 transition-colors ${activeTab === 'insta' ? 'text-brand-purple border-b border-brand-purple' : 'text-slate-400'}`}
                 >
                   Instagram
                 </button>
-                <button 
+                <button
                   onClick={() => setActiveTab('linkedin')}
                   className={`pb-1 px-1 transition-colors ${activeTab === 'linkedin' ? 'text-brand-indigo border-b border-brand-indigo' : 'text-slate-400'}`}
                 >
                   LinkedIn
                 </button>
-                <button 
+                <button
                   onClick={() => setActiveTab('tumblr')}
                   className={`pb-1 px-1 transition-colors ${activeTab === 'tumblr' ? 'text-brand-cyan border-b border-brand-cyan' : 'text-slate-400'}`}
                 >
