@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FiCpu, FiMail, FiSend } from 'react-icons/fi';
 import { FaInstagram, FaFacebook, FaLinkedin, FaPinterest, FaTumblr } from 'react-icons/fa';
 
-export default function Footer() {
+export default function Footer({ onNavigate }) {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -63,8 +63,8 @@ export default function Footer() {
               <ul className="space-y-3.5 text-xs text-slate-350 text-slate-300">
                 <li><a href="#faq" className="hover:text-white transition-colors">FAQ Support</a></li>
                 <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.tarasaka@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contact Support</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><button onClick={() => onNavigate?.('privacy')} className="hover:text-white transition-colors text-left">Privacy Policy</button></li>
+                <li><button onClick={() => onNavigate?.('privacy')} className="hover:text-white transition-colors text-left">Terms of Service</button></li>
               </ul>
             </div>
           </div>
@@ -112,9 +112,9 @@ export default function Footer() {
             © {new Date().getFullYear()} Mediamation Inc. All rights reserved. Built for professional social workflows.
           </div>
           <div className="flex space-x-6 mt-4 sm:mt-0">
-            <a href="#" className="hover:text-slate-450 hover:text-slate-350 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-slate-450 hover:text-slate-350 transition-colors">Terms</a>
-            <a href="#" className="hover:text-slate-450 hover:text-slate-350 transition-colors">Cookies</a>
+            <button onClick={() => onNavigate?.('privacy')} className="hover:text-slate-300 transition-colors">Privacy</button>
+            <button onClick={() => onNavigate?.('privacy')} className="hover:text-slate-300 transition-colors">Terms</button>
+            <a href="#" className="hover:text-slate-300 transition-colors">Cookies</a>
           </div>
         </div>
 

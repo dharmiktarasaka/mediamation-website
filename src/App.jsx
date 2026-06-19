@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import Problem from './sections/Problem';
@@ -12,8 +12,20 @@ import Screenshots from './sections/Screenshots';
 import Faq from './sections/Faq';
 import FinalCta from './sections/FinalCta';
 import Footer from './sections/Footer';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
+  const [page, setPage] = useState('home');
+
+  const navigateTo = (p) => {
+    setPage(p);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  if (page === 'privacy') {
+    return <PrivacyPolicy onBack={() => navigateTo('home')} />;
+  }
+
   return (
     <div className="relative min-h-screen text-slate-100 bg-[#030712] overflow-x-hidden font-sans">
       {/* Background radial effects */}
@@ -43,7 +55,7 @@ function App() {
       </main>
 
       {/* Page Footer */}
-      <Footer />
+      <Footer onNavigate={navigateTo} />
     </div>
   );
 }
