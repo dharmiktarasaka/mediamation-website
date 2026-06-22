@@ -5,7 +5,7 @@ import { FiPlay, FiX, FiCalendar, FiClock, FiCheck, FiSend, FiZap, FiGrid, FiLog
 import { FaInstagram, FaFacebook, FaLinkedin, FaPinterest, FaTumblr } from 'react-icons/fa';
 import MockupWindow from '../components/MockupWindow';
 import logo from '../assets/logo.png';
-import demoVideo from '../assets/how_it_works_demo.webp';
+import demoVideo from '../assets/how_it_works_demo.mp4';
 
 // Floating Icon Component with drop & return hover animation
 function FloatingIcon({ plat }) {
@@ -254,8 +254,8 @@ export default function Hero() {
                       <div
                         onClick={() => setActiveMockTab('dashboard')}
                         className={`px-3 py-2 rounded-lg text-[11px] flex items-center space-x-2.5 transition-all cursor-pointer ${activeMockTab === 'dashboard'
-                            ? 'bg-[#5850ec] text-white font-semibold shadow-md shadow-[#5850ec]/20'
-                            : 'text-slate-400 hover:bg-white/5 hover:text-slate-200 font-medium'
+                          ? 'bg-[#5850ec] text-white font-semibold shadow-md shadow-[#5850ec]/20'
+                          : 'text-slate-400 hover:bg-white/5 hover:text-slate-200 font-medium'
                           }`}
                       >
                         <FiGrid className="text-xs" />
@@ -264,8 +264,8 @@ export default function Hero() {
                       <div
                         onClick={() => setActiveMockTab('schedule')}
                         className={`px-3 py-2 rounded-lg text-[11px] flex items-center space-x-2.5 transition-all cursor-pointer ${activeMockTab === 'schedule'
-                            ? 'bg-[#5850ec] text-white font-semibold shadow-md shadow-[#5850ec]/20'
-                            : 'text-slate-400 hover:bg-white/5 hover:text-slate-200 font-medium'
+                          ? 'bg-[#5850ec] text-white font-semibold shadow-md shadow-[#5850ec]/20'
+                          : 'text-slate-400 hover:bg-white/5 hover:text-slate-200 font-medium'
                           }`}
                       >
                         <FiCalendar className="text-xs" />
@@ -274,8 +274,8 @@ export default function Hero() {
                       <div
                         onClick={() => setActiveMockTab('history')}
                         className={`px-3 py-2 rounded-lg text-[11px] flex items-center space-x-2.5 transition-all cursor-pointer ${activeMockTab === 'history'
-                            ? 'bg-[#5850ec] text-white font-semibold shadow-md shadow-[#5850ec]/20'
-                            : 'text-slate-400 hover:bg-white/5 hover:text-slate-200 font-medium'
+                          ? 'bg-[#5850ec] text-white font-semibold shadow-md shadow-[#5850ec]/20'
+                          : 'text-slate-400 hover:bg-white/5 hover:text-slate-200 font-medium'
                           }`}
                       >
                         <FiClock className="text-xs" />
