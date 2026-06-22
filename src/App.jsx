@@ -14,6 +14,7 @@ import FinalCta from './sections/FinalCta';
 import Footer from './sections/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Pricing from './pages/Pricing';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   const getPageFromHash = () => {
@@ -36,11 +37,21 @@ function App() {
   };
 
   if (page === 'privacy') {
-    return <PrivacyPolicy onBack={() => navigateTo('home')} />;
+    return (
+      <>
+        <PrivacyPolicy onBack={() => navigateTo('home')} />
+        <WhatsAppButton />
+      </>
+    );
   }
 
   if (page === 'pricing') {
-    return <Pricing onBack={() => navigateTo('home')} />;
+    return (
+      <>
+        <Pricing onBack={() => navigateTo('home')} />
+        <WhatsAppButton />
+      </>
+    );
   }
 
   return (
@@ -73,6 +84,7 @@ function App() {
 
       {/* Page Footer */}
       <Footer onNavigate={navigateTo} />
+      <WhatsAppButton />
     </div>
   );
 }
