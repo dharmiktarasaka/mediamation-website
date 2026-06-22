@@ -513,9 +513,10 @@ export default function Hero() {
 
                 {/* Responsive Video Container */}
                 <div className="relative aspect-video bg-black flex items-center justify-center">
-                  <img
+                  <video
                     src={demoVideo}
-                    alt="Mediamation Platform Tour"
+                    controls
+                    autoPlay
                     className="w-full h-full object-contain"
                   />
                 </div>
